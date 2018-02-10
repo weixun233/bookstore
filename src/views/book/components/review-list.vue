@@ -63,6 +63,9 @@
             font-size: $font-size-1_3
         .content
           @include no-warp-box(2)
+          /* autoprefixer: off*/
+          -webkit-box-orient: vertical
+          /* autoprefixer: on*/
           color: $color-999
           font-size: $font-size-1_3
         .helpful

@@ -20,7 +20,8 @@ export default {
         // 当前active的栏目的index
         let index = state.indexColumn.findIndex(item => item.classpath === state.indexActive)
         return { index }
-      }
+      },
+      indexActive: state => state.indexActive
     },
     mutations: {
         set_indexActive(state, val) {

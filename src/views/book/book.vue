@@ -280,6 +280,9 @@
       line-height: .2rem
       &.noWarp
         @include no-warp-box(3)
+        /* autoprefixer: off*/
+        -webkit-box-orient: vertical
+        /* autoprefixer: on*/
     .hr_1
       @include hr_1
     .title

@@ -16,6 +16,7 @@
 </script>
 <style scoped lang="sass" type="text/sass">
   @import "~common/css/variable"
+
   header
     display: flex
     padding: 0 .1rem

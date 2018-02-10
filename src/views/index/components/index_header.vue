@@ -15,8 +15,10 @@
   export default {
     computed: {
       ...mapState('index', [
-        'indexActive',
         'indexColumn'
+      ]),
+      ...mapGetters('index', [
+        'indexActive'
       ])
     },
     methods: {

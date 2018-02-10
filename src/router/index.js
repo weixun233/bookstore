@@ -46,7 +46,7 @@ export default new Router({
       component: classify
     },
     {
-      path: '/index//classify-details',
+      path: '/index/classify-details',
       component: classifyDetails
     },
 

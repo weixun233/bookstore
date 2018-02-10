@@ -10,7 +10,9 @@
 // 多行不换行 (行数)
 @mixin no-warp-box($clamp)
   display: -webkit-box
+  /* autoprefixer: off*/
   -webkit-box-orient: vertical
+  /* autoprefixer: on*/
   -webkit-line-clamp: $clamp
   overflow: hidden
 

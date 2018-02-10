@@ -30,7 +30,7 @@
                 </p>
               </div>
             </div>
-            <p class="evaluate" v-if="item.comment">{{item.comment}}</p>
+            <p class="evaluate" :class="evaluateText" v-if="item.comment" @click.stop="selectEval">{{item.comment}}</p>
           </li>
         </ul>
       </div>
@@ -64,12 +64,16 @@
     data() {
       return {
         themeBook: {},
+        evaluate: true,
         desc: true        // 简介是否收起
       }
     },
     computed: {
       descText() {
         return this.desc ? 'no-warp' : ''
+      },
+      evaluateText() {
+        return this.evaluate ? 'no-warp' : ''
       }
     },
     methods: {
@@ -90,6 +94,9 @@
       // 简介展开收起
       selectDesc() {
         this.desc = !this.desc
+      },
+      selectEval() {
+        this.evaluate = !this.evaluate
       }
     },
     components: {
@@ -121,6 +128,9 @@
         font-size: $font-size-1_2
         &.no-warp
           @include no-warp-box(5)
+          /* autoprefixer: off*/
+          -webkit-box-orient: vertical
+          /* autoprefixer: on*/
       .author
         display: flex
         align-items: center
@@ -168,4 +178,6 @@
         .evaluate
           line-height: .5rem
           font-size: $font-size-1_5
+          &.no-warp
+            @include no-warp
 </style>
